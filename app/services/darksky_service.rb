@@ -1,7 +1,6 @@
 class DarkskyService
 
   def initialize(coordinates)
-    require 'pry'; binding.pry
     @coordinates = coordinates
     @latitude = coordinates.first
     @longitude = coordinates.second
@@ -14,7 +13,7 @@ class DarkskyService
   private
 
   def make_call
-    response = Faraday.get("https://api.darksky.net/forecast/#{ENV['DARKSKY_API']}/#{@latitude}/#{@longitude}")
+    response = Faraday.get("https://api.darksky.net/forecast/#{ENV['DARKSKY_API']}/#{@latitude},#{@longitude}")
     JSON.parse(response.body, symbolize_names: true)
   end
 end

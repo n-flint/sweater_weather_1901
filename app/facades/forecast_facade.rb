@@ -11,7 +11,7 @@ class ForecastFacade
   end
 
   def weather
-    @_dark_sky_service = DarkskyService.new(coordinates)
+    @_dark_sky_service = DarkskyService.new(coordinates).get_weather
   end
 
 end
