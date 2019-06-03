@@ -7,10 +7,10 @@ RSpec.describe 'Antipode for a city', type: :request do
     city_data= JSON.parse(response.body)
 
     expect(response.code).to eq('200')
-    expect(weather_data).to have_key('data')
-    expect(weather_data['data']).to have_key('attributes')
-    expect(weather_data['data']['attributes']).to have_key('location_name')
-    expect(weather_data['data']['attributes']).to have_key('forecast')
-    expect(weather_data['data']).to have_key('search_location')
+    expect(city_data).to have_key('data')
+    expect(city_data['data']).to have_key('attributes')
+    expect(city_data['data']['attributes']).to have_key('location_name')
+    expect(city_data['data']['attributes']).to have_key('forecast')
+    expect(city_data['data']).to have_key('search_location')
   end
 end
