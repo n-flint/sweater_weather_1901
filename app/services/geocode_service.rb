@@ -14,22 +14,24 @@ class GeocodeService
     JSON.parse(response.body, symbolize_names: true)[:resourceSets][0][:resources][0][:point][:coordinates]
   end
 
+  def get_name
+    # require 'pry'; binding.pry
+    # response = Faraday.get("http://dev.virtualearth.net/REST/v1/Locations/#{@location}?includeEntityTypes=Address,CountryRegion&key=AnulG58VkXNfCRXuLxhsMj7gU8LblNG_rcndvcIRgFU7HeWEujXyhnmZSO2uMyxa")
+    response = Faraday.get("http://dev.virtualearth.net/REST/v1/Locations/{12,19}") do |f|
+      # f.params['point'] = '-27,98'
+      f.params['includeEntityTypes'] = "Address,CountryRegion"
+      f.params['key'] = "AnulG58VkXNfCRXuLxhsMj7gU8LblNG_rcndvcIRgFU7HeWEujXyhnmZSO2uMyxa"
+      # f.adapter Faraday.default_adapter
+    end
+    require 'pry'; binding.pry
+  end
+
   def rev_query
     {
       query: @location,
       key: ENV['BING_KEY']
     }
   end
-
-  def query
-    {
-      locality: city,
-      adminDistrict: state, 
-      countryRegion: 'United States',
-      key: ENV['BING_KEY']
-    }
-  end
-
 
   private
 
