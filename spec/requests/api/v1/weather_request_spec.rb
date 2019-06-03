@@ -9,5 +9,6 @@ RSpec.describe 'Weather For City', type: :request do
     expect(response.code).to eq('200')
     expect(weather_data).to have_key('data')
     expect(weather_data['data']).to have_key('attributes')
+    require 'pry'; binding.pry
   end
 end
