@@ -22,11 +22,6 @@ class BackgroundFacade
   end
 
   def background(photo_data)
-    Background.new(photo_data)
+    Background.new(photo_data).url
   end
-
-  def background_image_url
-
-  end
-
 end
