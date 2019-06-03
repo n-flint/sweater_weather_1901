@@ -12,6 +12,5 @@ RSpec.describe 'Antipode for a city', type: :request do
     expect(weather_data['data']['attributes']).to have_key('location_name')
     expect(weather_data['data']['attributes']).to have_key('forecast')
     expect(weather_data['data']).to have_key('search_location')
-    require 'pry'; binding.pry
   end
 end
