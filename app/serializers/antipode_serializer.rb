@@ -1,4 +1,4 @@
 class AntipodeSerializer
   include FastJsonapi::ObjectSerializer
-  attributes :id
+  attributes :id, :location_name, :forecast, :search_location
 end
