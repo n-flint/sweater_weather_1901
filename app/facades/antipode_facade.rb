@@ -8,7 +8,8 @@ class AntipodeFacade
 
   def location_name
     coordinates = GeocodeService.new(@location).get_lat_long
-    @_location_name = AntipodeService.new(coordinates).get_location
+    antipode_coordinates = AntipodeService.new(coordinates).get_antipode_coordinates
+    @_location_name = GeocodeService.new(antipode_coordinates).get_name
   end
 
   
