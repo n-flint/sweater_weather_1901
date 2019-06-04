@@ -13,13 +13,17 @@ class RoadtripFacade
     data = JSON.parse(response.body)
     
     travel_time = data['routes'][0]['legs'][0]['duration']['value']
+    @destination_lat = data['routes'][0]['legs'][0]['end_location']['lat']
+    @destination_lng = data['routes'][0]['legs'][0]['end_location']['lng']
     #takes the travel length then rounds it to the next hour, -1 to search by index value in next call
     hour = (travel_time/3600.00).ceil - 1
   end
   
   def destination_weather
+    # response = DarkskyService.new()
+
     offset = travel_time
-    response = Faraday.get("https://api.darksky.net/forecast/#{ENV['DARKSKY_API']}/38.2542024,-104.6087502?exclude=currently,minutely,daily,flags")
+    response = Faraday.get("https://api.darksky.net/forecast/#{ENV['DARKSKY_API']}/#{@destination_lat},#{@destination_lng}?exclude=currently,minutely,daily,flags")
     
     data = JSON.parse(response.body)
     
