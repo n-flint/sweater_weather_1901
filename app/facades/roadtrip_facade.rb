@@ -20,9 +20,10 @@ class RoadtripFacade
   end
   
   def destination_weather
-    # response = DarkskyService.new()
-
     offset = travel_time
+    response = DarkskyService.new([@destination_lat, @destination_lng]).get_weather
+
+
     response = Faraday.get("https://api.darksky.net/forecast/#{ENV['DARKSKY_API']}/#{@destination_lat},#{@destination_lng}?exclude=currently,minutely,daily,flags")
     
     data = JSON.parse(response.body)
