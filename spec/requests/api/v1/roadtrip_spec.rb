@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Roadtrip Weather', type: :request do
   it 'can get weather from roadtrip destination' do
-    get `/api/v1/road_trip?start=denver,co&end=pueblo,co`
+    get '/api/v1/road_trip?start=denver,co&end=pueblo,co'
 
     trip_data = JSON.parse
 
