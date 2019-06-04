@@ -1,6 +1,64 @@
 {
   "RSpec": {
     "coverage": {
+      "/Users/noahflint/turing/3module/projects/SweaterWeather/app/controllers/api/v1/users_controller.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        null,
+        0,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/noahflint/turing/3module/projects/SweaterWeather/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/noahflint/turing/3module/projects/SweaterWeather/app/models/user.rb": [
+        1,
+        null,
+        null
+      ],
+      "/Users/noahflint/turing/3module/projects/SweaterWeather/app/models/application_record.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/noahflint/turing/3module/projects/SweaterWeather/app/facades/user_facade.rb": [
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/noahflint/turing/3module/projects/SweaterWeather/app/serializers/user_serializer.rb": [
+        1,
+        1,
+        1,
+        null
+      ],
       "/Users/noahflint/turing/3module/projects/SweaterWeather/app/controllers/api/v1/background_controller.rb": [
         1,
         null,
@@ -10,10 +68,6 @@
         1,
         null,
         null,
-        null
-      ],
-      "/Users/noahflint/turing/3module/projects/SweaterWeather/app/controllers/application_controller.rb": [
-        1,
         null
       ],
       "/Users/noahflint/turing/3module/projects/SweaterWeather/app/facades/background_facade.rb": [
@@ -212,16 +266,11 @@
         null,
         null
       ],
-      "/Users/noahflint/turing/3module/projects/SweaterWeather/app/models/application_record.rb": [
-        0,
-        0,
-        0
-      ],
       "/Users/noahflint/turing/3module/projects/SweaterWeather/app/jobs/application_job.rb": [
         0,
         0
       ]
     },
-    "timestamp": 1559600569
+    "timestamp": 1559617914
   }
 }
