@@ -6,7 +6,8 @@ RSpec.describe 'Account creation', type: :request do
 
     user_data = JSON.parse(response.body)
 
-    expect(response.code).to eq(201)
-    expect(user_data).to have_key(['api_key'])
+    expect(response.code).to eq('201')
+    expect(user_data['data']).to have_key('attributes')
+    expect(user_data['data']['attributes']['api_key'].length).to eq(20)
   end
 end
